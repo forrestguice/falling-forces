@@ -1,0 +1,86 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!--<item android:id="@+id/menu_calc"
+        android:title="@string/menu_calc"
+        android:icon="@drawable/ic_menu_gallery"
+        android:orderInCategory="0"
+        android:showAsAction="always" />-->
+
+    <item
+        android:id="@+id/menu_help"
+        android:icon="@drawable/ic_menu_help"
+        android:orderInCategory="100"
+        android:title="@string/menu_help"
+        android:showAsAction="collapseActionView" />
+
+
+    <item
+        android:id="@+id/menu_graph_save"
+        android:icon="@drawable/ic_menu_gallery"
+        android:orderInCategory="97"
+        android:title="@string/menu_graph_save"
+        android:showAsAction="collapseActionView" />
+
+
+    <item
+        android:id="@+id/menu_graph_current"
+        android:icon="@drawable/ic_menu_more"
+        android:orderInCategory="99"
+        android:title="@string/menu_graph_current"
+        android:showAsAction="collapseActionView">
+        <menu>
+            <group android:checkableBehavior="single" >
+                <item
+                    android:id="@+id/graph_menuitem_plot1"
+                    android:title="@string/graph_menuitem_plot1"/>
+                <!-- <item
+                    android:id="@+id/graph_menuitem_plot2"
+                    android:title="@string/graph_menuitem_plot2"/>-->
+            </group>
+        </menu>
+    </item>
+    
+    <item
+        android:id="@+id/menu_graph_mode"
+        android:icon="@drawable/ic_menu_more"
+        android:orderInCategory="98"
+        android:title="@string/menu_graph_mode"
+        android:showAsAction="always">
+        <menu>
+            <group android:checkableBehavior="single" >
+                <item
+                    android:id="@+id/graph_menuitem_mode1"
+                    android:title="@string/graph_menuitem_mode1"/>
+                <item
+                    android:id="@+id/graph_menuitem_mode2"
+                    android:title="@string/graph_menuitem_mode2"/>
+                <item
+                    android:id="@+id/graph_menuitem_mode3"
+                    android:title="@string/graph_menuitem_mode3"/>
+            </group>
+        </menu>
+    </item>
+    
+    <item
+        android:id="@+id/menu_graph_grid"
+        android:icon="@drawable/ic_menu_more"
+        android:orderInCategory="98"
+        android:title="@string/menu_graph_grid"
+        android:showAsAction="collapseActionView">
+        <menu>
+            <group android:checkableBehavior="single" >
+                <item
+                    android:id="@+id/graph_menuitem_grid1"
+                    android:title="@string/graph_menuitem_grid1"/>
+                <item
+                    android:id="@+id/graph_menuitem_grid2"
+                    android:title="@string/graph_menuitem_grid2"/>
+                <item
+                    android:id="@+id/graph_menuitem_grid3"
+                    android:title="@string/graph_menuitem_grid3"/>
+            </group>
+        </menu>
+    </item>
+
+
+</menu>

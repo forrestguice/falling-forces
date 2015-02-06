@@ -1,0 +1,178 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- App Themes -->
+    <style name="dark" parent="darktheme">
+         
+        <item name="tabBackground">@drawable/tabbackgrounddark</item>
+        <item name="tabTextColor">@color/tabtextcolordark</item>
+        <item name="helpLinkAppearanceAttr">@style/TitleLinkTextAppearanceDark</item>
+        <item name="helpLinkColorAttr">@color/helplinkcolordark</item>
+        <item name="resultTextAppearanceAttr">@style/ResultTextAppearanceDark</item>
+        <item name="resultTextColorAttr">@color/resultcolordark</item>
+        <item name="resultSecondaryTextColorAttr">@color/resultcolor2dark</item>
+        <item name="resultFrameDrawableAttr">@drawable/resultbackgrounddark</item>   
+        <item name="mainActivityBackground">@drawable/backgrounddark</item>    
+        
+        <item name="graphBackgroundColor">@color/black</item>
+   		<item name="graphGridColor">@color/gray</item>
+   		<item name="graphDomainOriginColor">@color/silver</item>
+   		<item name="graphRangeOriginColor">@color/silver</item>
+   		<item name="graphDomainLabelColor">@color/white</item>
+   		<item name="graphRangeLabelColor">@color/silver</item>
+   		<item name="graphDomainTitleColor">@color/white</item>
+   		<item name="graphRangeTitleColor">@color/white</item>
+   		<item name="graphDomainOriginLabelColor">@color/silver</item>
+   		<item name="graphRangeOriginLabelColor">@color/silver</item>
+   		<item name="graphLineColor">@color/white</item>
+   		<item name="graphPointColor">@color/silver</item>
+   		<item name="graphFillStartColor">@color/white</item>
+   		<item name="graphFillEndColor">@color/yellow</item>
+    </style>
+     
+    <style name="light" parent="lighttheme">
+
+        <item name="tabBackground">@drawable/tabbackgroundlight</item>
+        <item name="tabTextColor">@color/tabtextcolorlight</item>
+        <item name="helpLinkAppearanceAttr">@style/TitleLinkTextAppearanceLight</item>
+        <item name="helpLinkColorAttr">@color/helplinkcolorlight</item>
+        <item name="resultTextAppearanceAttr">@style/ResultTextAppearanceLight</item>
+        <item name="resultTextColorAttr">@color/resultcolorlight</item>
+        <item name="resultSecondaryTextColorAttr">@color/resultcolor2light</item>
+        <item name="resultFrameDrawableAttr">@drawable/resultbackgroundlight</item>
+        <item name="mainActivityBackground">@drawable/backgroundlight</item>  
+        
+         <item name="graphBackgroundColor">@color/white</item>
+   		 <item name="graphGridColor">@color/silver</item>
+   		 <item name="graphDomainOriginColor">@color/black</item>
+   		 <item name="graphRangeOriginColor">@color/black</item>
+   		 <item name="graphDomainLabelColor">@color/black</item>
+   		 <item name="graphRangeLabelColor">@color/gray</item>
+   		 <item name="graphDomainTitleColor">@color/black</item>
+   		 <item name="graphRangeTitleColor">@color/black</item>
+ 	     <item name="graphDomainOriginLabelColor">@color/black</item>
+   		 <item name="graphRangeOriginLabelColor">@color/black</item>
+   		 <item name="graphLineColor">@color/gray</item>
+   		 <item name="graphPointColor">@color/silver</item>
+   		 <item name="graphFillStartColor">@color/white</item>
+   		 <item name="graphFillEndColor">@color/yellow</item>
+    </style>
+    
+    <style name="tabTextAppearance" parent="android:style/TextAppearance.Large">
+    </style>
+    
+    <!-- InputFieldStyle -->
+    <!-- .. style used by calculator number inputs -->
+    <style name="InputFieldStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_weight">3</item>
+		<item name="android:ems">10</item>
+		<item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+		<item name="android:singleLine">true</item>
+		<item name="android:digits">@string/localized_digits</item>
+		<item name="android:inputType">numberDecimal</item>
+		<item name="android:layout_gravity">center_vertical</item> 
+    </style>
+    
+    <style name="InputButtonStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+    
+    <!-- ResultFrameStyle -->
+    <!-- .. result display area / frame -->
+    <style name="ResultFrameStyle">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_marginTop">10dp</item>
+		<item name="android:layout_marginBottom">5dp</item>
+		<item name="android:layout_marginLeft">10dp</item>
+		<item name="android:layout_marginRight">10dp</item>
+		<!-- <item name="android:padding">5dp</item>-->
+		<!-- <item name="android:stretchColumns">0</item>-->
+		<item name="android:background">?resultFrameDrawableAttr</item>
+    </style>
+        <style name="ResultFrameStyleResult">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<!-- <item name="android:layout_marginTop">10dp</item>-->
+		<!-- <item name="android:layout_marginBottom">5dp</item>-->
+		<!-- <item name="android:layout_marginLeft">10dp</item>-->
+		<!-- <item name="android:layout_marginRight">10dp</item>-->
+		<!-- <item name="android:padding">5dp</item>-->
+		<!-- <item name="android:stretchColumns">0</item>-->
+		<!-- <item name="android:background">?resultFrameDrawableAttr</item>-->
+    </style>
+    <style name="ResultFrameTableRowStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">right</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+    </style>
+    
+    <!-- ResultTextAppearance -->
+    <!-- .. Text appearance used for calculated results -->
+    <style name="ResultTextAppearanceDark" parent="@android:style/TextAppearance.Widget.TextView">
+	    <item name="android:textStyle">bold</item>
+	</style>
+    <style name="ResultTextAppearanceLight" parent="@android:style/TextAppearance.Widget.TextView">
+	    <item name="android:textStyle">bold</item>
+	</style>
+	
+    <style name="ResultFieldTextStyle">
+        	<item name="android:layout_width">fill_parent</item>
+			<item name="android:layout_height">wrap_content</item>
+            <item name="android:layout_gravity">center_vertical</item>
+            <item name="android:gravity">right</item>
+			<item name="android:editable">false</item>
+			<item name="android:background">@null</item>
+			<item name="android:focusable">true</item>
+			<item name="android:cursorVisible">false</item>
+			<item name="android:focusableInTouchMode">true</item>
+			<item name="android:textColor">?resultTextColorAttr</item>
+			<item name="android:textAppearance">?resultTextAppearanceAttr</item>
+    </style>    
+    <style name="ResultFieldSecondaryTextStyle"> 
+        	<item name="android:layout_width">wrap_content</item>
+			<item name="android:layout_height">wrap_content</item>
+            <item name="android:layout_gravity">center_vertical</item>
+            <item name="android:layout_marginLeft">5dp</item>
+			<item name="android:textColor">?resultSecondaryTextColorAttr</item>
+    </style>    
+	    
+    <!-- TitleLinkTextAppearance -->
+    <!-- .. Text appearance used for titles that are also help links -->
+    <style name="TitleLinkTextAppearanceDark" parent="@android:style/TextAppearance.Widget.TextView">
+	    <!-- <item name="android:textStyle">bold</item>-->
+	</style>
+	<style name="TitleLinkTextAppearanceLight" parent="@android:style/TextAppearance.Widget.TextView">
+	    <!-- <item name="android:textStyle">bold</item>-->
+	</style>
+	
+    <!-- TitleFieldTextStyle -->
+    <!-- .. A title field displayed in table -->
+    <style name="TitleFieldTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical|right</item>
+		<item name="android:gravity">right</item>
+		<item name="android:layout_marginRight">5dp</item>
+		<item name="android:focusable">true</item>
+		<item name="android:textColor">?helpLinkColorAttr</item>
+		<item name="android:textAppearance">?helpLinkAppearanceAttr</item>
+    </style>
+    
+    <!-- VerticalDividerViewStyle -->
+    <!-- a vertical divider -->
+    <style name="VerticalDividerViewStyle">
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">2dp</item>
+        <item name="android:background">#808080</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:layout_gravity">center_vertical|center_horizontal</item>
+    </style>
+    
+</resources>

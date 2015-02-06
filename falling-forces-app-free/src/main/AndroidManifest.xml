@@ -1,0 +1,53 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.forrestguice.fallforces.free"
+    android:installLocation="auto"
+    android:versionCode="6"
+    android:versionName="0.3.0" >
+
+    <uses-sdk
+        android:minSdkVersion="4"
+        android:targetSdkVersion="19" />
+
+    <!-- permission required to save screenshots to sdcard -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    
+    <!-- permissions required to display ads --> <!-- commented as of 0.3.0 ... ads suck -->
+    <!-- <uses-permission android:name="android.permission.INTERNET" /> -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> -->
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/light" >
+        <activity
+            android:name="com.forrestguice.fallforces.free.MainActivityExt"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.forrestguice.fallforces.free.HelpActivityExt"
+            android:label="@string/app_help" />
+        <activity
+            android:name="com.forrestguice.fallforces.lib.HelpAboutView"
+            android:label="@string/app_help" />
+        <activity
+            android:name="com.forrestguice.fallforces.lib.HelpHowItWorksView"
+            android:label="@string/app_help" />
+        <activity
+            android:name="com.forrestguice.fallforces.free.SettingsActivityExt"
+            android:label="@string/app_settings" />
+        <activity
+            android:name="com.forrestguice.fallforces.lib.graph.ThreeDGraphActivity"
+            android:label="@string/app_graph" />
+
+        <!-- Activity: Mopub Browser -->
+        <!-- <activity
+            android:name="com.mopub.mobileads.MraidBrowser"
+            android:label="@string/app_name" /> -->
+    </application>
+
+</manifest>

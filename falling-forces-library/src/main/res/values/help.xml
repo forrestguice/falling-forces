@@ -1,0 +1,66 @@
+<resources>
+    <string name="help_dialog_title">Falling Forces Help</string>
+    <string name="headerHow">How it Works</string>
+    
+    <string name="txtHow">
+          <![CDATA[              
+    This app estimates the tension in the rope using the Wexler Equation. This is a simple spring model that applies conservation of energy.  
+<br /><br />The amount of tension in the rope is given by T = k * (s/L) | k is the rope modulus, s is length added to the rope due to stretch, and L is the length of the rope.
+<br /><br />The amount of work done to stretch the rope is W = k/2L * s^2 | k is the rope modulus, L is the length of rope, and s is the distance it stretches.
+<br /><br />The amount of work done by a falling climber is W = mgh | m is the mass of the climber, g is acceleration due to gravity, and h is the total fall distance.
+<br /><br />Conservation of energy argues that the amount of work done by the falling climber is equal to the amount of work done stretching the rope. Therefore mgh = k/2L * s^2.
+<br /><br />The tension produced by the falling climber can now be determined by solving this equality for s and plugging that value into the equation for T.
+<br /><br />This yields T = mg + sqrt((mg)^2 + 2kmg(h/l)).
+<br /><br />The equation can be simplified by recognizing that the fall factor is r = h/l, and the climber\'s weight is w = mg.
+<br /><br />This yields T = w + sqrt(w^2 + 2krw).
+	
+<br /><br />The rope modulus k is not typically published but a UIAA impact force U is. The UIAA impact force is the tension in the rope from an 80kg mass experiencing a fall factor of 1.78. We can determine the rope modulus by setting U equal to T and solving for k (using a mass of 80 kg).
+<br /><br />This yields k = U(U - 1.568) / 2.791.
+<br/><br />We can now plug k into our equation and determine T, the force on the climber.
+<br/><br/>The force on the anchor is traditionally considered to be 5T/3.
+<br/><br/>The force on the belayer can be determined by recognizing that the force on the anchor is the sum of the forces felt by both the climber and belayer.  
+                ]]>
+    </string>
+    
+    <string name="help_txt_climbermass">
+        <![CDATA[        
+        <b>Mass / Weight</b>
+<br /><br />The climber\'s mass may be entered using kilograms (kg), or by specifying the weight of the climber in pounds (lb).<br />
+<br />When specifying mass be sure to include any gear carried by the climber. 
+<br /><br />An object\'s weight is the result of multiplying its mass by the gravitational force it experiences (Earth gravity is assumed).<br />
+        ]]>
+    </string>
+        
+    <string name="help_txt_fallfactor">
+        <![CDATA[
+        <b>Fall Factor = Fall Distance / Rope Length</b><br /><br />Fall factor is defined by the height of the fall divided by the total length of rope between the climber and belayer. It is a ratio that ranges from 0 to 2 that directly influences fall forces. It is never greater than 2 since the farthest one can possibly fall before transferring forces onto the anchor is twice the length of the rope.<br /> 
+<br /><b><u>Example 1</u></b>:<br />A climber is 40ft above the ground and 10ft above their last protection when they fall. They fall twice the distance from their last protection.
+<br /><br />The fall factor is 20ft / 40ft = 0.5.<br />
+<br /><b><u>Example 2</u></b>:<br />On a multi-pitch route the leader climbs 2ft above the anchor, places protection, climbs another 2 ft and then falls. The leader falls a total of 4ft and comes to a stop next to his belayer.
+<br /><br />The fall factor is 4ft / 4ft = 1.<br />
+<br />Any fall where the climber comes to rest above his belayer will have a fall factor less than 1. When the belayer is standing on the ground the maximum fall factor is 1 (implying a collision with the ground).<br />
+<br /><b><u>Example 3</u></b>:<br />On a multi-pitch route the leader climbs 3 ft above the anchor without placing additional protection and then falls. The rope catches the leader 3ft below his belayer (a fall distance of 6ft).
+<br /><br />The fall factor is 6ft / 3ft = 2.<br />
+<br />This demonstrates how the maximum fall factor can occur even over a very small distance, and why it is considered a good idea to get protection in quickly above the anchor.<br />
+<br /><b><u>Example 4</u></b>:<br />A climber is on top-rope and rests their weight on the rope. A fall factor of 0 is momentarily experienced as the rope stretches and recovers under the weight of the climber.
+<br /><br />In this situation it can be shown that the tension on the rope will momentarily equal twice the climber\'s weight.<br />
+		]]>
+	</string>
+	
+    <string name="help_txt_impactrating">
+          <![CDATA[
+          
+<b>UIAA Impact Rating</b>
+<br /><br />The UIAA Impact Rating (measured in kN) is the force a climber with a mass of 80kg would experience in a 1.78 factor fall. A rope with a lower UIAA Impact Force implies a softer catch during a fall.
+<br /><br />The UIAA requires the impact rating for single ropes to be less than 12 kN.
+<br /><br />The rope modulus is required to calculate falling forces but most rope manufacturers publish the UIAA Impact Rating instead. This app derives the rope modulus from the UIAA Impact Rating.
+	
+<br />]]>      
+    </string>
+    
+    <string name="help_how_linkheader">References</string>
+    <string name="help_how_link">\nMoritz, Eckehard, and Steve Haake. <i>Engineering of Sport 6: Volume 1: Developments for Sports</i>. Springer, 2006. Print.
+        \n\nGoldstone, Richard. <i><a href="http://docs.google.com/viewer?url=http://sites.google.com/site/forrestguice/mobile-apps/falling-forces/StandardEqn.pdf">The Standard Equation for Impact Force</a></i>. Department of Mathematics and Computer Science, Manhattan College, Riverdale, NY, Dec. 2006. Web.
+     </string>
+                  
+</resources>

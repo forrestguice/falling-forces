@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Falling Forces Calculator</string>
+    <string name="app_version">0.3.0</string>
+    <string name="title_activity_main">Falling Forces Calculator</string>
+</resources>
