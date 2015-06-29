@@ -1,19 +1,19 @@
 /**
- Copyright (C) 2011 Forrest Guice
- This file is part of Falling Forces
+   Copyright (C) 2011 Forrest Guice
+   This file is part of Falling Forces
 
- Falling Forces is free software: you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation, either version 3 of the License, or
- (at your option) any later version.
+   Falling Forces is free software: you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation, either version 3 of the License, or
+   (at your option) any later version.
 
- Falling Forces is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
+   Falling Forces is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
 
- You should have received a copy of the GNU General Public License
- along with Falling Forces. If not, see <http://www.gnu.org/licenses/>.
+   You should have received a copy of the GNU General Public License
+   along with Falling Forces. If not, see <http://www.gnu.org/licenses/>.
 */
 
 package com.forrestguice.fallforces.lib.graph;
@@ -22,15 +22,12 @@ import java.io.File;
 
 import javax.microedition.khronos.opengles.GL;
 
-import android.app.Activity;
-
 import com.forrestguice.android.SaveToFileDialog;
 import com.forrestguice.fallforces.lib.ActivityUtil;
 import com.forrestguice.fallforces.lib.HelpActivity;
 import com.forrestguice.fallforces.lib.R;
-import com.forrestguice.glstuff.GLSurfaceView;
-import com.forrestguice.glstuff.MatrixTrackingGL;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -44,6 +41,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.widget.Toast;
+
+import com.forrestguice.glstuff.gle.GLSurfaceView;
+import com.forrestguice.glstuff.gle.MatrixTrackingGL;
 
 public class ThreeDGraphActivity extends Activity 
 {

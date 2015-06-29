@@ -1,3 +1,27 @@
+/**
+   Copyright (C) 2011 Forrest Guice
+   This file is part of Falling Forces
+
+   Falling Forces is free software: you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation, either version 3 of the License, or
+   (at your option) any later version.
+
+   Falling Forces is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with Falling Forces. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/**
+ * Stuff I don't hold copyright for that's in this file...
+ * -> savePixels method by "eugenk" (http://www.anddev.org/how_to_get_opengl_screenshot__useful_programing_hint-t829.html)
+ * -> gluUnProject method by "Streets of Boston" (https://groups.google.com/forum/?fromgroups=#!topic/android-developers/nSv1Pjp5jLY)
+ */
+
 package com.forrestguice.fallforces.lib.graph;
 
 import java.io.BufferedOutputStream;
@@ -14,7 +38,8 @@ import com.forrestguice.fallforces.lib.R;
 import com.forrestguice.fallforces.model.ModelWexler;
 import com.forrestguice.fallforces.model.RopeModulus;
 import com.forrestguice.glstuff.Camera;
-import com.forrestguice.glstuff.MatrixGrabber;
+import com.forrestguice.glstuff.gle.GLSurfaceView;
+import com.forrestguice.glstuff.gle.MatrixGrabber;
 import com.forrestguice.glstuff.Vector3D;
 import com.forrestguice.glstuff.VertexArray;
 import com.forrestguice.glstuff.gltext.GLText;
@@ -43,7 +68,7 @@ import android.provider.MediaStore.Images;
 import android.util.TypedValue;
 import android.view.MotionEvent;
 
-public class ThreeDGraphRenderer implements com.forrestguice.glstuff.GLSurfaceView.Renderer
+public class ThreeDGraphRenderer implements GLSurfaceView.Renderer
 {
 	public ThreeDGraph graph;
 		
@@ -894,35 +919,7 @@ public class ThreeDGraphRenderer implements com.forrestguice.glstuff.GLSurfaceVi
 	//    context.getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
 	//}
 		
-	/**
-	 * savePixels(GL10) : Bitmap ... unknown author
-	 */
-	public Bitmap savePixels(GL10 gl)
-    {
-		int width = (int)surfaceSize.x;
-		int height = (int)surfaceSize.y;
-		
-        int b[] = new int[width * height];
-        IntBuffer ib = IntBuffer.wrap(b);
-        ib.position(0);
-        gl.glReadPixels(0, 0, width, height, GL10.GL_RGBA, GL10.GL_UNSIGNED_BYTE, ib);
 
-        Bitmap glbitmap = Bitmap.createBitmap(b, width, height, Bitmap.Config.ARGB_4444);
-        final float[] cmVals = { 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0 };
-
-        Paint paint = new Paint();
-        paint.setColorFilter(new ColorMatrixColorFilter(new ColorMatrix(cmVals))); // our R<->B swapping paint
-
-        Bitmap bitmap = Bitmap.createBitmap(width, height, Config.ARGB_4444); // the bitmap we're going to draw onto
-        Canvas canvas = new Canvas(bitmap); // we draw to the bitmap through a canvas
-        canvas.drawBitmap(glbitmap, 0, 0, paint); // draw the opengl bitmap onto the canvas, using the color swapping paint
-        glbitmap = null; // we're done with glbitmap, let go of its memory
-
-        // the image is still upside-down, so vertically flip it
-        Matrix matrix = new Matrix();
-        matrix.preScale(1.0f, -1.0f); // scaling: x = x, y = -y, i.e. vertically flip
-        return Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true); // new bitmap, using the flipping matrix
-    }
 	
 	/**
 	 * Utility method - quickly round a double to an arbitrary number of decimal places
@@ -932,23 +929,56 @@ public class ThreeDGraphRenderer implements com.forrestguice.glstuff.GLSurfaceVi
 	   int temp = (int)(d * Math.pow(10 , c));  
 	   return ((double)temp)/Math.pow(10 , c);  
 	}
-					
-    /** this code authored by "Streets of Boston" found at 
-     * https://groups.google.com/forum/?fromgroups=#!topic/android-developers/nSv1Pjp5jLY
-     */
-	
-	private static final float[] _tempGluUnProjectData = new float[40]; 
-	private static final int     _temp_m   = 0; 
-	private static final int     _temp_A   = 16; 
-	private static final int     _temp_in  = 32; 
-	private static final int     _temp_out = 36; 
-	
+
+	//////////////////////////////////////////////////
+	//////////////////////////////////////////////////
+	//////////////////////////////////////////////////
+
+	/**
+	 * savePixels(GL10) : Bitmap
+	 * unknown author / copyright but a possible source is http://www.anddev.org/how_to_get_opengl_screenshot__useful_programing_hint-t829.html posted by user eugenk
+	 */
+	public Bitmap savePixels(GL10 gl)
+	{
+		int width = (int)surfaceSize.x;
+		int height = (int)surfaceSize.y;
+
+		int b[] = new int[width * height];
+		IntBuffer ib = IntBuffer.wrap(b);
+		ib.position(0);
+		gl.glReadPixels(0, 0, width, height, GL10.GL_RGBA, GL10.GL_UNSIGNED_BYTE, ib);
+
+		Bitmap glbitmap = Bitmap.createBitmap(b, width, height, Bitmap.Config.ARGB_4444);
+		final float[] cmVals = { 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0 };
+
+		Paint paint = new Paint();
+		paint.setColorFilter(new ColorMatrixColorFilter(new ColorMatrix(cmVals))); // our R<->B swapping paint
+
+		Bitmap bitmap = Bitmap.createBitmap(width, height, Config.ARGB_4444); // the bitmap we're going to draw onto
+		Canvas canvas = new Canvas(bitmap); // we draw to the bitmap through a canvas
+		canvas.drawBitmap(glbitmap, 0, 0, paint); // draw the opengl bitmap onto the canvas, using the color swapping paint
+		glbitmap = null; // we're done with glbitmap, let go of its memory
+
+		// the image is still upside-down, so vertically flip it
+		Matrix matrix = new Matrix();
+		matrix.preScale(1.0f, -1.0f); // scaling: x = x, y = -y, i.e. vertically flip
+		return Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true); // new bitmap, using the flipping matrix
+	}
+
+	private static final float[] _tempGluUnProjectData = new float[40];
+	private static final int     _temp_m   = 0;
+	private static final int     _temp_A   = 16;
+	private static final int     _temp_in  = 32;
+	private static final int     _temp_out = 36;
+
 	/**
 	 * Map window coordinates to object coordinates. 
 	 * 
 	 * gluUnProject maps the specified window coordinates into object 
 	 * coordinates using model, proj, and view. The result is stored in xyz.
-	 * 
+	 *
+	 * @author by "Streets of Boston" (posted to support forum at https://groups.google.com/forum/?fromgroups=#!topic/android-developers/nSv1Pjp5jLY)
+	 *
 	 * @param winx window coordinates X
 	 * @param winy window coordinates Y
 	 * @param winz window coordinates Z
@@ -989,7 +1019,5 @@ public class ThreeDGraphRenderer implements com.forrestguice.glstuff.GLSurfaceVi
 	   xyz[offset+2] = _tempGluUnProjectData[_temp_out+2] / _tempGluUnProjectData[_temp_out+3]; 
 	   return GL10.GL_TRUE; 
 	} 
-	
-
 
 }

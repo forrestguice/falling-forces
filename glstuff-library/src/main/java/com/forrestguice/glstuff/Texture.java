@@ -16,19 +16,24 @@
    along with Falling Forces. If not, see <http://www.gnu.org/licenses/>.
 */
 
-package com.forrestguice.fallforces.lib;
+package com.forrestguice.glstuff;
 
-import android.os.Bundle;
-import android.preference.PreferenceActivity;
+import android.util.Log;
 
-public class SettingsActivity extends PreferenceActivity
+public class Texture 
 {
-   @Override
-   public void onCreate(Bundle savedInstanceState)
-   {
-	  ActivityUtil.initActivity(this);
-      super.onCreate(savedInstanceState);
-      addPreferencesFromResource(R.xml.preferences);
-      setContentView(R.layout.settings_view);
-   }
+	public int textureId = -1;
+	public int textureIndex = -1;
+	
+	public float width = -1;
+	public float height = -1;
+	
+	public Texture(int id, float w, float h)
+	{
+		textureId = id;
+		width = w;
+		height = h;
+		
+		//Log.d("Texture", "loaded " + textureId + ", width: " + width + ", height " + height);
+	}
 }
