@@ -1,0 +1,37 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_settings"
+        android:title="@string/menu_settings"
+        android:icon="@drawable/ic_menu_preferences"
+        android:orderInCategory="100"
+        android:showAsAction="collapseActionView" />
+    
+    <item android:id="@+id/menu_help"
+        android:title="@string/menu_help"
+        android:icon="@drawable/ic_menu_help"
+        android:orderInCategory="99"
+        android:showAsAction="collapseActionView" />
+    
+    <item android:id="@+id/menu_convert_force"
+        android:title="@string/menu_convert_force"
+        android:icon="@drawable/ic_menu_more"
+        android:orderInCategory="1"
+        android:showAsAction="collapseActionView" />
+    
+    <item android:id="@+id/menu_fallfactor"
+        android:title="@string/menu_fallfactor"
+        android:icon="@drawable/ic_menu_more"
+        android:orderInCategory="1"
+        android:showAsAction="collapseActionView" />
+    
+    <item android:id="@+id/menu_impactrating"
+        android:title="@string/menu_impactrating"
+        android:icon="@drawable/ic_menu_more"
+        android:orderInCategory="1"
+        android:showAsAction="collapseActionView" />
+    
+    <item android:id="@+id/menu_graph"
+        android:title="@string/menu_graph"
+        android:icon="@drawable/ic_menu_gallery"
+        android:orderInCategory="0"
+        android:showAsAction="always" />
+</menu>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<!-- ##### -->
+	<!-- Appearance -->
+	<!-- ##### -->
+	<PreferenceCategory android:title="Appearance">
+
+		<ListPreference android:key="theme" android:title="@string/pref_theme_title"
+			android:summary="@string/pref_theme_summary" android:defaultValue="dark"
+			android:entries="@array/theme_list_labels" android:entryValues="@array/theme_list_values" />
+
+	</PreferenceCategory>
+	
+	<PreferenceCategory android:title="General">
+
+		<ListPreference android:key="ropemodel" android:title="@string/pref_ropemodel_title"
+			android:summary="@string/pref_ropemodel_summary" android:defaultValue="wexler"
+			android:entries="@array/ropemodel_list_labels" android:entryValues="@array/ropemodel_list_values" />
+
+	</PreferenceCategory>
+
+	<!-- ##### -->
+	<!-- Units -->
+	<!-- ##### -->
+	<PreferenceCategory android:title="Units">
+
+		<ListPreference android:key="units_distance"
+			android:title="@string/pref_units_distance_title" android:summary="@string/pref_units_distance_summary"
+			android:defaultValue="ft" android:entries="@array/units_distance"
+			android:entryValues="@array/units_distance_values" />
+
+		<ListPreference android:key="units_force"
+			android:title="@string/pref_units_force_title" android:summary="@string/pref_units_force_summary"
+			android:defaultValue="kN" android:entries="@array/units_force"
+			android:entryValues="@array/units_force_values" />
+
+		<ListPreference android:key="units_mass"
+			android:title="@string/pref_units_mass_title" android:summary="@string/pref_units_mass_summary"
+			android:defaultValue="lb" android:entries="@array/units_mass"
+			android:entryValues="@array/units_mass_values" />
+
+		<CheckBoxPreference android:key="units_convert"
+			android:title="@string/pref_units_convert_title" android:summary="@string/pref_units_convert_summary"
+			android:defaultValue="true" />
+
+	</PreferenceCategory>
+
+</PreferenceScreen>

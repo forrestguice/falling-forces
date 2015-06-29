@@ -1,0 +1,192 @@
+<resources>
+
+    <string name="app_name">Falling Forces Calculator</string>
+    <string name="app_version">0.3.0</string>
+    <string name="app_desc">A simple calculator for estimating fall forces on a rope.</string>
+    <string name="app_copyright">\nCopyright 2011 by Forrest Guice\nAll rights reserved.\n\n
+
+    <a href="http://icons8.com/web-app/7148/Grid">Free icons by Icons8 - TODO fix this</a>
+
+    </string>
+    
+    <string name="app_legal_header">\nLegal Disclaimer</string>
+    <string name="app_legal_notice">This application is for educational and entertainment purposes only. It should not be used as part of any decision making process in real life climbing situations. It produces rough estimates using a model that approximates reality. It is not accurate enough to trust your life with. It does not replace experience or real world testing. The author takes no liability for misuse.</string>
+    <string name="app_support_header">\nSupport</string>
+    <string name="app_support_notice"><a href="https://sites.google.com/site/forrestguice/mobile-apps/email-support">http://sites.google.com/site/forrestguice/mobile-apps/email-support</a></string>
+        
+    <string name="app_graph">Falling Forces (3D Graph)</string>
+    <string name="app_settings">Falling Forces Settings</string>
+    <string name="app_help">Falling Forces Help</string>
+    <string name="title_activity_main">Falling Forces Calculator</string> 
+    
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="close">Close</string>
+    <string name="localized_digits">0123456789.-</string>     
+
+    <string name="menu_graph_grid">Grid Lines</string>
+    <string name="graph_menuitem_grid1">None</string>
+    <string name="graph_menuitem_grid2">Major</string>
+    <string name="graph_menuitem_grid3">Major and Minor</string>
+    
+    <string name="menu_graph_current">Select Plot</string>
+    <string name="graph_menuitem_plot1">Fall Factor vs Mass</string>
+    <string name="graph_menuitem_plot2">Fall Factor vs Rating</string>
+    
+    <string name="menu_graph_mode">Select Mode</string>
+    <string name="graph_menuitem_mode1">Force on Climber</string>
+    <string name="graph_menuitem_mode2">Force on Belayer</string>
+    <string name="graph_menuitem_mode3">Force on Anchor</string>
+    
+    <string name="menu_graph_save">Save Screenshot</string>
+
+    <string name="menu_calc">Show Calculator</string>
+
+    <string name="menu_graph">Show Graph</string>
+    <string name="menu_help">Help</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_convert_force">Unit Converter (kN &lt;==&gt; lbs)</string>
+    <string name="menu_fallfactor">Fall Factor Calculator</string>
+    <string name="menu_impactrating">Impact Rating Calculator</string>
+
+    <string name="tab_how">How it Works</string>
+    <string name="tab_about">About</string>
+       
+    <string name="input_weight_hint">Mass of climber</string>
+    <string name="input_fallfactor_hint">Fall Factor (0–2)</string>
+    <string name="input_impactrating_hint">UIAA Rating</string>
+    
+    <string name="input_fallfactor_title"><u>Fall Factor</u>:</string>
+    <string name="input_mass_title"><u><![CDATA[Climber\'s Mass]]></u>:</string>
+    <string name="input_impactrating_title"><u>Impact Rating</u>:</string>
+        
+    <string name="input_action">Calculate Forces</string>
+    <string name="input_reset">Clear</string>
+    
+    <string name="btn_ok">Close</string>
+    <string name="btn_close">Close</string>
+    <string name="btn_apply">Apply</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_calc">Calculate</string>
+    <string name="btn_help"> \? </string>
+    
+    <string name="force_dialog_title">Force Units Converter</string>
+    <string name="fallfactor_dialog_title">Fall Factor Calculator</string>
+    <string name="impactrating_dialog_title">Impact Rating Calculator</string>
+        
+    <string name="impactratingdialog_modulus_hint">Rope Modulus</string>
+    <string name="impactratingdialog_rating_hint">UIAA Impact Rating</string>
+       
+    <string name="fallfactor_height_hint">Fall distance</string>
+    <string name="fallfactor_length_hint">Length of rope</string>
+        
+    <string name="fall">fall</string>
+    <string name="kn">kN</string>
+    <string name="lb">lb</string>
+    
+    <string name="forcedialog_kn_hint">Value in kN</string>
+    <string name="forcedialog_lb_hint">Value in lb</string>
+    
+    
+    <string name="error_fallfactor_height">The falling height may not be more than 2x the length of the rope.</string>
+  
+    <string  name="output_prefix_anchor">on anchor</string>
+    <string name="output_prefix_climber">on climber</string>
+    <string name="output_prefix_belayer">on belayer</string>
+        
+   <string name="units_menuitem_distance_ft">Feet (ft)</string>
+   <string name="units_menuitem_distance_m">Meters (m)</string>
+   
+   <string name="units_menuitem_mass_lb">Pounds (lb)</string>
+   <string name="units_menuitem_mass_kg">Kilograms (kg)</string>
+      
+   <string name="graph_area_title">Plot Forces</string>
+   
+   <!-- Export (Screenshot) Dialog -->
+   
+   <string name="export_dialog_title">Save Screenshot</string>
+   <string name="export_prompt">Select a save method</string>
+   <string name="export_extension">Select a file type</string>
+   <string name="export_filename_hint">filename</string>
+   
+   <string name="export_action_success">Saving to\n</string>
+   <string name="export_error_exists">already exists. Overwrite it?</string>
+   <string name="export_error_exists_title">Overwrite File?</string>
+
+   <string name="export_error_filename">A filename is required to save a screenshot.</string>
+   
+   <string-array name="export_array">
+        <item>Save to SD Card</item>
+   </string-array>
+   
+   <string-array name="export_extensions">
+       <item>.jpg</item>
+       <item>.png</item>
+   </string-array>
+         
+    <!-- 			 -->
+    <!-- Preferences -->
+    <!-- 			 -->
+    
+    <string name="pref_units_convert_title">Convert Values</string>
+    <string name="pref_units_convert_summary">Automatically convert inputs when units are changed from a button.</string>
+    
+    
+    <string name="pref_units_mass_title">Mass</string>
+    <string name="pref_units_mass_summary">Set the units used when inputting mass.</string>
+    <string-array name="units_mass">
+        <item>Pounds (lbs)</item>
+        <item>Kilograms (kgs)</item>
+    </string-array>
+    <string-array name="units_mass_values">
+        <item>lb</item>
+        <item>kg</item>
+    </string-array>
+    
+    <string name="pref_units_distance_title">Distance</string>
+    <string name="pref_units_distance_summary">Set the units used when inputting distance.</string>
+    <string-array name="units_distance">
+        <item>Feet (ft)</item>
+        <item>Meters (m)</item>
+    </string-array>
+    <string-array name="units_distance_values">
+        <item>ft</item>
+        <item>m</item>
+    </string-array>
+    
+    <string name="pref_units_force_title">Force</string>
+    <string name="pref_units_force_summary">Set the units used when displaying force.</string>
+    <string-array name="units_force">
+        <item>Kilonewtons (kN)</item>
+        <item>Pounds (lb)</item>
+    </string-array>
+    <string-array name="units_force_values">
+        <item>kN</item>
+        <item>lb</item>
+    </string-array>
+        
+    <string name="pref_theme_title">UI Theme</string>
+    <string name="pref_theme_summary">Set the appearance of the user interface (requires restart).</string>
+    <string-array name="theme_list_labels">
+        <item>Dark</item>
+        <item>Light</item>
+    </string-array>
+    <string-array name="theme_list_values">
+        <item>dark</item>
+        <item>light</item>
+    </string-array>
+    
+    <string name="pref_ropemodel_title">Rope Model</string>
+    <string name="pref_ropemodel_summary">Set the model used to make calculations.</string>
+    <string-array name="ropemodel_list_labels">
+        <item>Wexler Spring Model</item>
+    </string-array>
+    <string-array name="ropemodel_list_values">
+        <item>wexler</item>
+    </string-array>
+    
+    <string name="btn_save">Save</string>
+    
+
+    
+</resources>

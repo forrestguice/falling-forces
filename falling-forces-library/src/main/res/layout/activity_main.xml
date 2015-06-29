@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="?mainActivityBackground" >
+    
+    <!--  -->
+    <!-- OUTPUT AREA -->
+    <!--  -->
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    style="@style/ResultFrameStyle">
+
+    <TableLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/output_table"
+        style="@style/ResultFrameStyleResult" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            style="@style/ResultFrameTableRowStyle"
+            android:layout_marginTop="5dp" >
+
+            <EditText
+                android:id="@+id/output_force_climber"
+                style="@style/ResultFieldTextStyle"
+                android:hint=""
+                android:text="" />
+
+            <TextView
+                style="@style/ResultFieldSecondaryTextStyle"
+                android:text="@string/output_prefix_climber" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            style="@style/ResultFrameTableRowStyle" >
+
+            <EditText
+                android:id="@+id/output_force_belayer"
+                style="@style/ResultFieldTextStyle"
+                android:hint=""
+                android:text="" />
+
+            <TextView
+                style="@style/ResultFieldSecondaryTextStyle"
+                android:text="@string/output_prefix_belayer" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            style="@style/ResultFrameTableRowStyle"
+            android:layout_marginBottom="5dp" >
+
+            <EditText
+                android:id="@+id/output_force_anchor"
+                style="@style/ResultFieldTextStyle"
+                android:hint=""
+                android:text="" />
+
+            <TextView
+                style="@style/ResultFieldSecondaryTextStyle"
+                android:text="@string/output_prefix_anchor" />
+        </TableRow>
+    </TableLayout>
+    
+    <com.forrestguice.fallforces.lib.VirtualBiner
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:gravity="right" 
+        android:layout_gravity="top|right" />
+    
+	</LinearLayout>
+	
+    <!--  -->
+    <!-- INPUT FORM -->
+    <!--  -->
+
+    <TableLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tableLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp" 
+        android:stretchColumns="1">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/input_fallfactor_help"
+                style="@style/TitleFieldTextStyle"
+                android:text="@string/input_fallfactor_title" />
+
+            <EditText
+                android:id="@+id/input_fallfactor"
+                style="@style/InputFieldStyle"
+                android:lines="1"
+                android:ellipsize="end"
+                android:hint="@string/input_fallfactor_hint" >
+
+                <requestFocus />
+            </EditText>
+
+            <ImageButton
+                android:id="@+id/input_fallfactor_calc"
+                style="@style/InputButtonStyle"
+                android:layout_weight="0"
+                android:contentDescription="@string/fallfactor_dialog_title"
+                android:src="@drawable/ic_action_search" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/input_mass_help"
+                style="@style/TitleFieldTextStyle"
+                android:text="@string/input_mass_title" />
+
+            <EditText
+                android:id="@+id/input_mass"
+                style="@style/InputFieldStyle"
+                android:hint="@string/input_weight_hint" >
+            </EditText>
+
+            <Button
+                android:id="@+id/input_mass_units"
+                style="@style/InputButtonStyle"
+                android:layout_weight="0" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/input_impactrating_help"
+                style="@style/TitleFieldTextStyle"
+                android:text="@string/input_impactrating_title" />
+
+            <EditText
+                android:id="@+id/input_impactrating"
+                style="@style/InputFieldStyle"
+                android:hint="@string/input_impactrating_hint" >
+            </EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:text="@string/kn" />
+            
+            <ImageButton
+                android:id="@+id/input_impactrating_calc"
+                style="@style/InputButtonStyle"
+                android:layout_weight="0"
+                android:contentDescription="@string/impactrating_dialog_title"
+                android:src="@drawable/ic_action_search" />
+            
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent" android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp" android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/input_reset"
+            style="@style/InputButtonStyle"
+            android:text="@string/input_reset" />
+
+        <Button
+            android:id="@+id/input_action"
+            style="@style/InputButtonStyle"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:text="@string/input_action"
+            android:textStyle="bold" />
+    </LinearLayout>
+    
+</LinearLayout>

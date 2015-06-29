@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" 
+android:id="@+id/scroll" 
+android:layout_width="fill_parent"
+android:layout_height="wrap_content">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical"
+android:gravity="left"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content" >
+
+      <!--
+      <TextView
+      android:id="@+id/label_header"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="28sp"
+      android:typeface="monospace"
+      android:textStyle="bold"
+      android:text="@string/tab_about" />
+      -->
+
+      <TextView
+      android:id="@+id/label_name"
+      android:textSize="28sp"
+      android:textStyle="bold"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/app_name" />
+
+      <TextView
+      android:id="@+id/label_version"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textStyle="italic"
+      android:text="@string/app_version" />
+
+      <TextView
+      android:id="@+id/label_desc"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/app_desc" />
+
+      <TextView
+      android:id="@+id/label_legal"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/app_copyright" />
+
+      <TextView
+      android:id="@+id/label_support_header"
+      android:textStyle="bold"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/app_support_header" />
+
+      <TextView
+      android:id="@+id/label_support_notice"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/app_support_notice" />
+      
+      <TextView
+      android:id="@+id/label_legal_header"
+      android:textStyle="bold"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/app_legal_header" />
+
+      <TextView
+      android:id="@+id/label_legal_notice"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/app_legal_notice" />
+
+</LinearLayout>
+</ScrollView>

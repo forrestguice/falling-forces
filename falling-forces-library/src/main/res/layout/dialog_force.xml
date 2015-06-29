@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="horizontal" android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+
+		<EditText android:id="@+id/txt_forcedialog_kn" 
+		    style="@style/InputFieldStyle"
+			android:layout_marginLeft="5dp" android:hint="@string/forcedialog_kn_hint">
+			<requestFocus />
+		</EditText>
+
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_marginLeft="2dp"
+			android:layout_marginRight="5dp" android:text="@string/kn" 
+			android:layout_gravity="center_vertical" />
+
+	</LinearLayout>
+
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="horizontal" android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+
+		<EditText android:id="@+id/txt_forcedialog_lb" 
+		    style="@style/InputFieldStyle"
+			android:layout_marginLeft="5dp" android:hint="@string/forcedialog_lb_hint" />
+
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_marginLeft="5dp"
+			android:layout_marginRight="5dp" android:text="@string/lb" 
+			android:layout_gravity="center_vertical" />
+
+	</LinearLayout>
+
+	<Button android:id="@+id/btn_forcedialog_close"
+		android:layout_marginBottom="5dp" android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp" android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:text="@string/btn_close" />
+
+</LinearLayout>

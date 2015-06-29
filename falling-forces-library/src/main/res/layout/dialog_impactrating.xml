@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="horizontal" android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+
+		<EditText android:id="@+id/txt_impactratingdialog_modulus"
+			style="@style/InputFieldStyle" 
+			android:layout_marginLeft="5dp"
+			android:hint="@string/impactratingdialog_modulus_hint">
+			<requestFocus />
+		</EditText>
+
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_marginLeft="2dp"
+			android:layout_marginRight="5dp" android:text=" " 
+			android:layout_gravity="center_vertical" />
+	</LinearLayout>
+
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="horizontal" android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+
+		<EditText android:id="@+id/txt_impactratingdialog_rating"
+			style="@style/InputFieldStyle" 
+			android:layout_marginLeft="5dp"
+			android:hint="@string/impactratingdialog_rating_hint" />
+
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_marginLeft="5dp"
+			android:layout_marginRight="5dp" android:text="@string/kn" 
+			android:layout_gravity="center_vertical" />
+	</LinearLayout>
+
+	<EditText android:id="@+id/txt_impactratingdialog_result"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_marginRight="5dp" android:layout_marginLeft="10dp"
+		android:layout_marginTop="10dp" android:layout_marginBottom="10dp"
+		android:editable="false" android:background="@null" android:textColor="#FFFFFF"
+		android:focusable="true" android:focusableInTouchMode="true"
+		android:cursorVisible="false" />
+
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="horizontal" android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+
+		<Button android:id="@+id/btn_impactratingdialog_cancel"
+			android:layout_marginLeft="5dp" android:layout_marginBottom="5dp"
+			style="@style/InputButtonStyle"
+			android:text="@string/btn_cancel" />
+
+		<Button android:id="@+id/btn_impactratingdialog_apply"
+			android:layout_marginBottom="5dp" android:layout_marginRight="5dp"
+			style="@style/InputButtonStyle" android:layout_width="fill_parent"
+			android:text="@string/btn_apply" />
+
+	</LinearLayout>
+
+</LinearLayout>
